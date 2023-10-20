@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    tools:context=".mako_asset">
+
+    <ImageView
+        android:id="@+id/titleImg"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/mhs2_asset"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/titleAsset"
+        android:layout_width="260dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Red Dragon Scale"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleImg"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/descAsset"
+        android:layout_width="260dp"
+        android:layout_height="120dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Get yourself cool skin for your rider to accompany you during your adventure"
+        app:layout_constraintTop_toBottomOf="@+id/titleAsset"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:id="@+id/email"
+        android:background="@drawable/custom_input"
+        android:hint="Email"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/black"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/descAsset"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/payment_method"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/custom_input"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:hint="@string/select"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoText3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/payment_method"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="back"
+            android:backgroundTint="@color/background_app"/>
+
+        <Button
+            android:id="@+id/buyBtn"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/btn_blue"
+            android:text="buy"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
